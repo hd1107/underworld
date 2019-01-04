@@ -6,10 +6,9 @@
       * [快速开始](#快速开始)
          * [1. 安装JDK](#1-安装jdk)
          * [2. 安装FTP](#2-安装ftp)
-         * [3. 安装SFTP](#3-安装sftp)
-         * [4. 导入数据库脚本](#4-导入数据库脚本)
-            * [4.1 metro](#41-metro)
-            * [4.2 metrotask](#42-metrotask)
+         * [3. 导入数据库脚本](#4-导入数据库脚本)
+            * [3.1 metro](#41-metro)
+            * [3.2 metrotask](#42-metrotask)
       * [概述及安装包](#概述及安装包)
       * [部署管理节点](#部署管理节点)
       * [部署调用节点](#部署调用节点)
@@ -53,7 +52,9 @@
 在节点资源准备好后，开始安装平台需要的公共组件,分为以下几个步骤:
 * 安装JDK;
 * 安装FTP;
-* 安装SFTP;
+* 配置原始FTP;
+* 配置共享FTP;
+* 配置SFTP;
 * 导入数据库脚本;
 
 需要的软件信息如下表所示:
@@ -121,10 +122,76 @@
 
 
 ### 2. 安装FTP
-### 3. 安装SFTP
-### 4. 导入数据库脚本
-#### 4.1 metro
-#### 4.2 metrotask
+平台需要两个FTP节点和一个SFTP节点，三个节点都使用server-u提供服务,安装的过程相同，请按照以下步骤:
+#### 安装server-u
+1. 双击server-u安装包, 开始安装
+ ![1](/home/hd/Downloads/underworld/img/f1.png)
+2. 选择接受协议,点击下一步
+ ![2](/home/hd/Downloads/underworld/img/f2.png)
+3. 选择默认安装目录,点击下一步
+ ![3](/home/hd/Downloads/underworld/img/f3.png)
+4.  点击下一步
+ ![4](/home/hd/Downloads/underworld/img/f4.png)
+5. 点击下一步
+ ![5](/home/hd/Downloads/underworld/img/f5.png)
+6. 点击安装
+ ![6](/home/hd/Downloads/underworld/img/f6.png)
+7. 开始过程，时长约半分钟
+ ![7](/home/hd/Downloads/underworld/img/f7.png)
+8. 添加server-u到防火墙例外
+ ![8](/home/hd/Downloads/underworld/img/f8.png)
+9. 点击完成，server-u安装完成
+
+安装后server-u后开始配置，首先配置共享ftp节点
+
+#### 配置共享FTP
+1. 点击桌面任务栏右下角server-u图标,打开控制台
+ ![1](/home/hd/Downloads/underworld/img/c1.png)
+
+2. 点击导航加号按钮，开始配置
+ ![2](/home/hd/Downloads/underworld/img/c2.png)
+3. 创建一个新的域，输入域名share,点击下一步
+ ![3](/home/hd/Downloads/underworld/img/c3.png)
+4. 点击下一步
+ ![4](/home/hd/Downloads/underworld/img/c4.png)
+5. 输入本机的ip地址,192.168.81.121
+ ![5](/home/hd/Downloads/underworld/img/c5.png)
+6. 输入需要共享的文件夹 c:/share,点击下一步
+ ![6](/home/hd/Downloads/underworld/img/c6.png)
+7. 只选择FTP共享,点击下一步
+ ![7](/home/hd/Downloads/underworld/img/c7.png)
+8. 点击下一步
+ ![8](/home/hd/Downloads/underworld/img/c8.png)
+9. 点击下一步
+ ![9](/home/hd/Downloads/underworld/img/c9.png)
+10. 创建用户，选择是
+ ![10](/home/hd/Downloads/underworld/img/c10.png)
+11. 选择是
+ ![12](/home/hd/Downloads/underworld/img/c12.png)
+12. 输入用户名,share
+ ![13](/home/hd/Downloads/underworld/img/c13.png)
+13. 输入密码，abcd1234,点击下一步
+ ![14](/home/hd/Downloads/underworld/img/c14.png)
+14. 选择用户目录，
+ ![15](/home/hd/Downloads/underworld/img/c15.png)
+15. 选择完全访问权限，点击完成
+ ![16](/home/hd/Downloads/underworld/img/c16.png)
+
+
+
+#### 配置原始FTP
+配置原始节点FTP过程和配置共享FTP过程完全相同，在第5步需要输入原始FTP节点的IP地址，在第６步输入原始FTP的目录,其他步骤完全一致
+
+#### 配置SFTP
+配置原始节点FTP过程和配置共享FTP过程完全相同，在第5步需要输入原始FTP节点的IP地址，在第６步输入原始FTP的目录,在第7部只选择sftp选项
+ ![1](/home/hd/Downloads/underworld/img/s1.png)
+
+
+FTP和SFTP的安装到此结束
+
+### 3. 导入数据库脚本   
+#### 3.1 metro
+#### 3.2 metrotask
 
 
 
