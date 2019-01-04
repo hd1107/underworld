@@ -46,8 +46,8 @@
  |调用(32)|4C/8G|4C/16G|200G|Windows Server 2012 R2 (x64) |
  |文件|4C/8G|4C/16G|200G|Windows Server 2012 R2 (x64) |
  |原始FTP|4C/8G|4C/16G|200G|Windows Server 2012 R2 (x64) |
-　|共享FTP|4C/8G|4C/16G|200G|Windows Server 2012 R2 (x64)|
-　|SFTP|4C/8G|4C/16G|200G|Windows Server 2012 R2 (x64|
+ |共享FTP|4C/8G|4C/16G|200G|Windows Server 2012 R2 (x64)|
+ |SFTP|4C/8G|4C/16G|200G|Windows Server 2012 R2 (x64|
 
 ## 快速开始
 在节点资源准备好后，开始安装平台需要的公共组件,分为以下几个步骤:
