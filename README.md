@@ -200,9 +200,11 @@
 
 
 #### 配置原始FTP
+
 配置原始节点FTP过程和配置共享FTP过程完全相同，在第5步需要输入原始FTP节点的IP地址，在第６步输入原始FTP的目录,其他步骤完全一致.
 
 #### 配置SFTP
+
 配置原始节点FTP过程和配置共享FTP过程完全相同，在第5步需要输入原始FTP节点的IP地址，在第６步输入原始FTP的目录,在第7部只选择sftp选项.
  ![1](/home/hd/Downloads/underworld/img/s1.png)
 
@@ -210,6 +212,7 @@
 FTP和SFTP的安装到此结束．
 
 ### 3. 导入数据库脚本   
+
 在这个章节主要是创建平台需要的表空间，用户和表结构，平台需要3个实例.
 
 |实例名称|关联节点|用途|备注|
@@ -219,13 +222,31 @@ FTP和SFTP的安装到此结束．
 |jsd|调用||
 #### 3.1 metro
 
+metro实例需要使用metro_tablespace.sql和metro_table.sql两个sql脚本文件,导入过程如下:
+
+1. 使用plsql连接为metro实例准备的数据库.
+ ![1](/home/hd/Downloads/underworld/img/o1.png)
+
+2. 点击左上角open按钮.
+ ![2](/home/hd/Downloads/underworld/img/o2.png)
+
+3. 选择metro_tablespace.sql文件．
+ ![3](/home/hd/Downloads/underworld/img/o3.png)
+
+4. 点击执行按钮，导入过程大约5分钟左右．
+ ![4](/home/hd/Downloads/underworld/img/o4.png)
+
+5. 导入结束后在选择metro_table.sql,点击执行按钮，导入过程大约30分钟.
+
 #### 3.2 metrotask
 
+metro实例需要使用metrotask_tablespace.sql和metrotask_table.sql两个sql脚本文件,导入过程和导入metro实例完全相同，详细步骤请参考导入metro实例章节.
 
 
 #　产品安装
 
 ## 概述及安装包
+
  整个平台包含4个安装包，详细情况如下表所示:
  |安装包名|关联节点|大小|备注|
 |---|----|-----|-----|
@@ -246,6 +267,7 @@ FTP和SFTP的安装到此结束．
 ### 安装Hyperic-Sigar
 
 Hyperic-Sigar需要在两个调用节点(64和32位)同时部署，详细步骤如下:
+
 1. 使用解压缩软件，解压安装包到指定目录，建议选择当前目录.
  ![1](/home/hd/Downloads/underworld/img/h1.png)
 
@@ -287,7 +309,6 @@ tomcat需要部署在管理，文件下载和调用(32,64)共4个节点分别部
 
 6. 修改tomcat日志字符集,使用notepad++打开apache-tomcat-7.0.92-windows-x64\apache-tomcat-7.0.92\conf\logging.properties文件，将第47行UTF-8修改为GB2312，如下如所示:
  ![5](/home/hd/Downloads/underworld/img/x1.png)
-
 
 
 ## 部署管理节点
